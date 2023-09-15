@@ -41,11 +41,10 @@ El siguiente código muestra como inicializar la función de comparación. Reser
 */
 
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {  
-   TreeMap *mapa=(TreeMap*) malloc(sizeof(TreeMap));
-  
-  
-    mapa->lower_than = lower_than;
-    return mapa;
+  TreeMap *mapa=(TreeMap*) malloc(sizeof(TreeMap));
+  if(lower_than==NULL) return NULL;
+  mapa->lower_than = lower_than;
+  return mapa;
 }
 
 
