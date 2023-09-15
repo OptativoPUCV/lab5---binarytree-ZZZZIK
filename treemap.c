@@ -81,7 +81,7 @@ Recuerde hacer que el current apunte al nodo encontrado.
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
-  if (tree==NULL|| key==NULL) return NULL;
+  //if (tree==NULL|| key==NULL) return NULL;
   TreeNode* nodo=tree->root;
   
   
@@ -91,7 +91,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       return NULL;
     }
     */
-    if ((tree->lower_than(nodo->pair->key,key))==0){
+    if ((tree->lower_than(key,nodo->pair->key))==0){
       tree->current=nodo;
       return nodo->pair;
     } 
