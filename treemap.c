@@ -96,10 +96,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       return nodo->pair;
     } 
     if ((tree->lower_than(nodo->pair->key,key)==1){
-      nodo=nodo->right;
+      nodo=nodo->left;
     }
     if ((tree->lower_than(nodo->pair->key,key)<0){
-      nodo=nodo->left;
+      nodo=nodo->right;
     }
   }
   tree->current = NULL;
