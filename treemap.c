@@ -95,7 +95,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     else if ((tree->lower_than(nodo->pair->key,key))>0){
       nodo=nodo->right;
     }
-    else {
+    else if ((tree->lower_than(nodo->pair->key,key))<0) {
       nodo=nodo->left;
     }
   }
