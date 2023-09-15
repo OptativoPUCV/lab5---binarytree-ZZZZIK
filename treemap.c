@@ -88,11 +88,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       tree->current=NULL;
       return NULL;
     }
-    if ((tree->lower_than(key,nodo->pair->key))==0){
+    if ((tree->lower_than(nodo->pair->key,key))==0){
       tree->current=nodo;
       return nodo->pair;
     } 
-    else if ((tree->lower_than(key,nodo->pair->key))==1){
+    else if ((tree->lower_than(nodo->pair->key,key))==1){
       nodo=nodo->right;
     }
     else {
