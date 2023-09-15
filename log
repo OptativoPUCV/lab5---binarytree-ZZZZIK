@@ -169,3 +169,17 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 0dd0d19
+Fri 15 Sep 2023 07:09:28 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:101:56: error: expected ‘)’ before ‘{’ token
+  101 |     else if ((tree->lower_than(nodo->pair->key,key)==1){
+      |             ~                                          ^
+      |                                                        )
+treemap.c:104:3: error: expected expression before ‘}’ token
+  104 |   }
+      |   ^
+Compilation failed
+7cf81fd
