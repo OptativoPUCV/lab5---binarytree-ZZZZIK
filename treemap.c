@@ -80,31 +80,25 @@ Recuerde hacer que el current apunte al nodo encontrado.
 */
 
 
-Pair * searchTreeMap(TreeMap * tree, void* key) {
-  //if (tree==NULL|| key==NULL) return NULL;
-  TreeNode* nodo=tree->root;
-  
-  
-  while (nodo!=NULL){
-    /*if (nodo==NULL){
-      tree->current=NULL;
-      return NULL;
-    }
-    */
-    if (is_equal(tree,nodo->pair->key,key)==1){
-      tree->current=nodo;
+Pair* searchTreeMap(TreeMap* tree, void* key) {
+  TreeNode* nodo = tree->root;
+
+  while (nodo != NULL) {
+    if (is_equal(tree, nodo->pair->key, key) == 1) {
+      tree->current = nodo;
       return nodo->pair;
     } 
-    if ((tree->lower_than(key,nodo->pair->key)==1){
-      nodo=nodo->left;
+    if (tree->lower_than(key, nodo->pair->key) == 1) {
+      nodo = nodo->left;
     }
-    if ((tree->lower_than(key,nodo->pair->key)==0){
-      nodo=nodo->right;
+    if (tree->lower_than(key, nodo->pair->key) == 0) {
+      nodo = nodo->right;
     }
   }
   tree->current = NULL;
   return NULL;
 }
+
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
