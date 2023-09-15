@@ -126,3 +126,17 @@ Fri 15 Sep 2023 07:06:37 AM UTC:
  tests:  6|7
 total_score: 5/70
 6b45a82
+Fri 15 Sep 2023 07:08:24 AM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:101:56: error: expected ‘)’ before ‘{’ token
+  101 |     else if ((tree->lower_than(key,nodo->pair->key)==1){
+      |             ~                                          ^
+      |                                                        )
+treemap.c:104:3: error: expected expression before ‘}’ token
+  104 |   }
+      |   ^
+Compilation failed
+16932d4
