@@ -140,3 +140,32 @@ treemap.c:104:3: error: expected expression before ‘}’ token
       |   ^
 Compilation failed
 16932d4
+Fri 15 Sep 2023 07:09:18 AM UTC: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:97:10: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   97 |     } key,nodo->pair->key
+      |          ^
+treemap.c:97:10: error: statement with no effect [-Werror=unused-value]
+treemap.c:97:26: error: expected ‘;’ before ‘else’
+   97 |     } key,nodo->pair->key
+      |                          ^
+      |                          ;
+   98 |     else if ((tree->lower_than(key,nodo->pair->key))==1){
+      |     ~~~~                  
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0dd0d19
