@@ -84,17 +84,12 @@ Pair* searchTreeMap(TreeMap* tree, void* key) {
   TreeNode* nodo=tree->root;
 
   while (nodo!=NULL) {
-    
-    int caso = is_equal(tree,key, nodo->pair->key);
-    
-    if (caso == 1) {
+    if ((is_equal(tree,key, nodo->pair->key)) == 1) {
       tree->current=nodo;
       return nodo->pair;
     }
-    
-    int caso2 = tree->lower_than(key, nodo->pair->key);
-    
-    if (caso2==1) {
+  
+    if ((tree->lower_than(key, nodo->pair->key))==1) {
       nodo=nodo->left;
     }
     else{
