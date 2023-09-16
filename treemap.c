@@ -245,14 +245,14 @@ Pair* upperBound(TreeMap* tree, void* key) {
   while(nodo!=NULL){
     //if(nodo==NULL) return NULL;
     
-    else{  
+    //else{  
         if(tree->lower_than(nodo->pair->key,key)==0){
           Nodo_ub = nodo->pair;
           nodo = nodo->left;
         }else{
           nodo=nodo->right;
         }
-    }
+    //}
   }
   return Nodo_ub;
 }
