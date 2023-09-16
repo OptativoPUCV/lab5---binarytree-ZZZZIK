@@ -244,7 +244,7 @@ Pair* upperBound(TreeMap* tree, void* key) {
   
   while(nodo!=NULL){
   
-        if(tree->lower_than(nodo->pair->key,key)<0){
+        if(tree->lower_than(nodo->pair->key,key)==0){
           Nodo_ub = nodo->pair;
           nodo = nodo->left;
         }else{
