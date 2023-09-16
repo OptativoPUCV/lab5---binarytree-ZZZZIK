@@ -85,6 +85,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         break;
       }
     }
+  }else{
+    tree->root = nuevo_nodo;
   }
 }
 
