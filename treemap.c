@@ -80,7 +80,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       tree->current=tree->current->right;
     }
     //IZQUIERDA
-    //else{
     if (tree-> lower_than(key, tree->current->pair->key) == 1){
       if (tree->current->left==NULL){
         tree->current->left=nuevo_nodo;
@@ -90,9 +89,19 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     }
   }
 }
-TreeNode * minimum(TreeNode * x){
 
+/*
+4.- Implemente la función TreeNode * minimum(TreeNode * x). Esta función retorna el **nodo con la mínima clave** ubicado en el subárbol con raiz x. Para obtener el nodo tiene que, a partir del nodo x, irse por la rama izquierda hasta llegar al final del subárbol. Si x no tiene hijo izquierdo se retorna el mismo nodo.
+   
+    TreeNode * minimum(TreeNode * x){|
+        return NULL;
+    }
+*/
+
+TreeNode * minimum(TreeNode * x){
+  if (x==NULL){
     return NULL;
+  }
 }
 
 
