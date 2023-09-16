@@ -914,3 +914,9 @@ treemap.c:256:10: error: ‘Nodo_ub’ may be used uninitialized in this functio
 cc1: all warnings being treated as errors
 Compilation failed
 b5aae13
+Sat 16 Sep 2023 08:01:35 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  18|4
+total_score: 35/70
+8a9cae9
