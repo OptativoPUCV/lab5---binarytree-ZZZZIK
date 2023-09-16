@@ -990,3 +990,14 @@ Sat 16 Sep 2023 08:14:40 AM UTC:
  tests:  23|2
 total_score: 50/70
 7b812d6
+Sat 16 Sep 2023 08:20:46 AM UTC: 
+ treemap.c | 19 ++++++-------------
+ 1 file changed, 6 insertions(+), 13 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:183:16: error: statement with no effect [-Werror=unused-value]
+  183 |     node->right->left;
+      |     ~~~~~~~~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+92b7f4e
