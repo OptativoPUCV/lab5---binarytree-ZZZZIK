@@ -174,8 +174,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       aux_hijo->parent=node->parent;
   }
   
-//DOS HIJOS
-
+  //DOS HIJOS
+    //no se pudo 
   
 }
 
