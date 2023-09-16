@@ -55,7 +55,8 @@ Para insertar un dato, primero debe realizar una búsqueda para encontrar donde 
 */
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-  TreeNode *nuevo_nodo = malloc(sizeof(TreeNode));
+  TreeNode *nuevo_nodo = createTreeNode(key, value);
+
   nuevo_nodo->pair = malloc(sizeof(Pair));
   nuevo_nodo->pair->key=key;
   nuevo_nodo->pair->value=value;
@@ -63,7 +64,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   nuevo_nodo->right=NULL;
 
   if (tree->root!=NULL){
-  //TreeNode * aux=  tree->root;
     while (1){
       if(tree->lower_than(key,tree->root->pair->key)==1){
         if (tree->root->left==NULL) {
