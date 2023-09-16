@@ -102,6 +102,12 @@ TreeNode * minimum(TreeNode * x){
   if (x==NULL){
     return NULL;
   }
+  while (x->left != NULL) {
+    x = x->left;
+  }
+    
+    return x;
+  
 }
 
 
