@@ -180,10 +180,17 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       node->right=node->right->left;
     }
 
-    node->right->left;
-    node->pair->key = node->right->left->pair->key;
-    node->pair->value = node->right->left->pair->value;  
-    
+    //node->right;
+    node->pair->key = node->right->pair->key;
+    node->pair->value = node->right->pair->value;  
+    if (node->right->parent->left == node->right)
+        node->right->parent->left = node->right->right;
+    else{
+      node->right->parent->right=node->right->right;
+    }
+    if(node->right->right!=NULL){
+      node->right->right->parent=node->right->parent;
+    }
   }
 
   
