@@ -239,15 +239,24 @@ Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo 
 */
 
 Pair* upperBound(TreeMap* tree, void* key) {
-    TreeNode* aux = NULL;
-  
-  
-    while (tree->root != NULL) {
-        if(is_equal(tree,tree->root->pair->key,key)==0){
-          return tree->root->pair;
+  Pair *Nodo_aux = NULL;
+  while(1){
+    if (tree->root!=NULL){  
+        if(tree->lower_than(tree->root->pair->key,key)!=0){
+          tree->root=tree->root->right;
+        }else if(tree->lower_than(tree->root->pair->key,key)==0){
+          Nodo_aux =tree->root->pair;
+          tree->root=tree->root->left;
         }
     }
-}
+    else{
+      break;
+    } 
+  }
+  return Nodo_aux;
+
+
+  
 Pair * firstTreeMap(TreeMap * tree) {
     return NULL;
 }
