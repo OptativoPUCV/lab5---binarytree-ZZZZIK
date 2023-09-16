@@ -175,24 +175,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
   }
   
 //DOS HIJOS
-else {
-    TreeNode* nodo_minimo = node->right; 
-    while (nodo_minimo->left != NULL) {
-        nodo_minimo = nodo_minimo->left;
-    }
-
-    
-    node->pair->key = nodo_minimo->pair->key;
-    node->pair->value = nodo_minimo->pair->value;
-
-  
-    if (nodo_minimo->parent->left==nodo_minimo)
-        nodo_minimo->parent->left=nodo_minimo->right;
-    else
-        nodo_minimo->parent->right=nodo_minimo->right;
-
-    if (nodo_minimo->right != NULL)
-        nodo_minimo ->right->parent =nodo_minimo->parent;
 
   
 }
