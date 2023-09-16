@@ -175,6 +175,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
   }
   
 // DOS HIJOS
+    /*
   else{
     while(node->right->left != NULL){
       node->right= node->right->left;
@@ -192,6 +193,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       node->right->right->parent=node->right->parent;
     }
   }
+  */
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
@@ -246,6 +248,7 @@ Pair* upperBound(TreeMap* tree, void* key) {
 
         if(tree->lower_than(nodo->pair->key,key)!=0){
           nodo=nodo->right;
+          
         }else if(tree->lower_than(nodo->pair->key,key)==0){
           Nodo_ub = nodo->pair;
           nodo = nodo->left;
