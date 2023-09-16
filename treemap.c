@@ -242,7 +242,7 @@ Pair* upperBound(TreeMap* tree, void* key) {
   Pair *Nodo_ub=NULL;
   
   while(1){
-    if(tree->root==NULL) break;
+    if(tree->root==NULL) return NULL;
     
     else{  
         if(tree->lower_than(tree->root->pair->key,key)==0){
