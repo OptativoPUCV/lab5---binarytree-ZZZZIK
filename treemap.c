@@ -246,16 +246,15 @@ Pair* upperBound(TreeMap* tree, void* key) {
     
     else{  
         if(tree->lower_than(tree->root->pair->key,key)==0){
-          Nodo_ub =tree->root->pair;
-          tree->root=tree->root->left;
+          Nodo_ub = tree->root->pair;
+          tree->root = tree->root->left;
         }else{
           tree->root=tree->root->right;
         }
     }
-    
   }
   return Nodo_ub;
-
+}
 
   
 Pair * firstTreeMap(TreeMap * tree) {
