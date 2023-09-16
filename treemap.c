@@ -80,8 +80,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       tree->current=tree->current->right;
     }
     //IZQUIERDA
-    else{
-    //if (tree-> lower_than(key, tree->current->pair->key) == 1){
+    //else{
+    if (tree-> lower_than(key, tree->current->pair->key) == 1){
       if (tree->current->left==NULL){
         tree->current->left=nuevo_nodo;
         nuevo_nodo->parent=tree->current;
