@@ -240,16 +240,17 @@ Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo 
 
 Pair* upperBound(TreeMap* tree, void* key) {
   Pair *Nodo_ub=NULL;
+  TreeNode *nodo=tree->root;
   
   while(1){
-    if(tree->root==NULL) return NULL;
+    if(nodo==NULL) return NULL;
     
     else{  
-        if(tree->lower_than(tree->root->pair->key,key)==0){
-          Nodo_ub = tree->root->pair;
-          tree->root = tree->root->left;
+        if(tree->lower_than(nodo->pair->key,key)==0){
+          Nodo_ub = nodo->pair;
+          nodo = nodo->left;
         }else{
-          tree->root=tree->root->right;
+          nodo=nodo->right;
         }
     }
   }
