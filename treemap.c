@@ -65,6 +65,9 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   }
 
   while(1){
+    
+    if(tree->current!=NULL) break;
+    
     if (is_equal(tree, key, tree->current->pair->key)) return;
 
     //DERECHA
